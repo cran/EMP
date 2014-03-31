@@ -1,0 +1,15 @@
+Package: EMP
+Type: Package
+Title: Estimates EMP following Verbraken et al. (2014)
+Version: 1.0
+Date: 2014-03-31
+Author: Cristian Bravo and Thomas Verbraken
+Maintainer: Cristian Bravo <crbravo@utalca.cl>
+Depends: R (>= 3.0.0)
+Description: Functions for estimating EMP (Expected Maximum Profit Measure) in
+  Credit Scoring, according to Verbraken et al (2014).
+License: GPL (>= 3)
+Packaged: 2014-03-31 13:52:21 UTC; cristian
+NeedsCompilation: no
+Repository: CRAN
+Date/Publication: 2014-03-31 16:28:58
