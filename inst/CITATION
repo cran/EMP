@@ -1,0 +1,33 @@
+citHeader("To cite the R package 'EMP' in publications, please use:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
+
+citEntry(entry="article",
+         title = "Development and application of consumer credit scoring 
+                  models using profit-based classification measures",
+         author = personList(as.person("T. Verbraken"), as.person("C. Bravo"),
+                  as.person("R. Weber"), as.person("B. Baesens")),
+         journal   = "European Journal of Operational Research",
+         year = "2014",
+         volume = "In Press",
+         pages = "Available Online",
+         url = "http://www.sciencedirect.com/science/article/pii/S0377221714003105",
+         textVersion = paste("Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014)",
+  	       "Development and application of consumer credit scoring models using profit-based classification measures.",
+               "European Journal of Operational Research.", "In Press. Available Online:",
+                "http://www.sciencedirect.com/science/article/pii/S0377221714003105")
+)
+
+citEntry(entry="Manual",
+         title = "EMP: Expected Maximum Profit for Credit Scoring",
+         author = personList(as.person("Cristian Bravo"),
+                             as.person("Thomas Verbraken")),
+         year = year,
+         note = vers,
+         textVersion =
+         paste("Bravo, C. and Verbraken, T. (",
+               year,
+               "). EMP: Expected Maximum Profit for Credit Scoring. ",
+               vers, ". ", "Available Online: http://cran.r-project.org/web/packages/EMP/index.html",
+                sep=""))

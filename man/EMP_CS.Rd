@@ -36,9 +36,8 @@ An EMP object with two components.
 percentual cutoff at EMP profit.}
 }
 \references{
-Verbraken T., Bravo C., Weber, R., and Baesens, B. 2014. Development and 
-application of consumer credit scoring models using profit-based classification 
-measures. European Journal of Operational Research. Forthcomming.
+Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014). Development and application of consumer credit scoring models using profit-based classification measures. European Journal of Operational Research.
+In Press. Available Online: http://www.sciencedirect.com/science/article/pii/S0377221714003105
 }
 \author{
 Cristian Bravo and Thomas Verbraken.
