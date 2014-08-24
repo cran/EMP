@@ -3,7 +3,7 @@ EMP_CS <- function(ROC,p0=0.55,p1=0.1,ROI=0.2644){
   # Verbraken T., Bravo C., Weber, R., and Baesens, B. 2014. Development and 
   # application of consumer credit scoring models using profit-based 
   # classification measures. European Journal of Operational Research.
-  # Forthcomming.
+  # 238 (2): 505-513.
   # This software comes with absolutely no warranty. Use at your own risk.
   # That said, it should work! :D.
   # This code calculates the EMP measure for credit scoring, assuming a

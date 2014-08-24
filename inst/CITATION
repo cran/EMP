@@ -10,12 +10,13 @@ citEntry(entry="article",
                   as.person("R. Weber"), as.person("B. Baesens")),
          journal   = "European Journal of Operational Research",
          year = "2014",
-         volume = "In Press",
-         pages = "Available Online",
+         volume = "238",
+         number = "2",
+         pages = "505-513",
          url = "http://www.sciencedirect.com/science/article/pii/S0377221714003105",
          textVersion = paste("Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014)",
   	       "Development and application of consumer credit scoring models using profit-based classification measures.",
-               "European Journal of Operational Research.", "In Press. Available Online:",
+               "European Journal of Operational Research.", "238 (2): 505-513",
                 "http://www.sciencedirect.com/science/article/pii/S0377221714003105")
 )
 

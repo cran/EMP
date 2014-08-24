@@ -3,7 +3,7 @@
 \alias{EMP}
 \docType{package}
 \title{
-EMP: Expected Maximum Profit for Credit Scoring.
+Expected Maximum Profit for Credit Scoring.
 }
 \description{
 The EMP measure is an alternative to AUC that includes the expected profit of
@@ -16,8 +16,8 @@ with two point masses, and a constant ROI.
 \tabular{ll}{
 Package: \tab EMP\cr
 Type: \tab Package\cr
-Version: \tab 1.0.1\cr
-Date: \tab 2014-04-15\cr
+Version: \tab 1.0.2\cr
+Date: \tab 2014-08-24\cr
 License: \tab GPL (>=3)\cr
 }
 The package consists of only two functions, EMP_CS and calcROC. The second one
@@ -30,8 +30,7 @@ Authors: Cristian Bravo and Thomas Verbraken.
 Mantainer: Cristian Bravo <crbravo@utalca.cl>.
 }
 \references{
-Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014). Development and application of consumer credit scoring models using profit-based classification measures. European Journal of Operational Research.
-In Press. Available Online: http://www.sciencedirect.com/science/article/pii/S0377221714003105
+Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014). Development and application of consumer credit scoring models using profit-based classification measures. European Journal of Operational Research. 238 (2): 505 - 513. Available Online: \url{http://www.sciencedirect.com/science/article/pii/S0377221714003105}
 }
 \examples{
 # Dummy dataset.
