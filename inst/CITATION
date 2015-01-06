@@ -1,7 +1,36 @@
-citHeader("To cite the R package 'EMP' in publications, please use:")
+citHeader("To cite the R package 'EMP' in publications, please use one of these entries:")
 
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
 vers <- paste("R package version", meta$Version)
+
+citEntry(entry="Manual",
+         title = "EMP: Expected Maximum Profit Classification Performance Measure",
+         author = personList(as.person("Cristian Bravo"),
+                             as.person("Seppe vanden Broucke"),
+                             as.person("Thomas Verbraken")),
+         year = year,
+         note = vers,
+         textVersion =
+         paste("Bravo, C. and Vanden Broucke, S. and Verbraken, T. (",
+               year,
+               "). EMP: Expected Maximum Profit Classification Performance Measure. ",
+               vers, ". ", "Available Online: http://cran.r-project.org/web/packages/EMP/index.html",
+                sep=""))
+
+citEntry(entry="article",
+         title = "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models",
+         author = personList(as.person("T. Verbraken"), as.person("W. Verbeke"), as.person("B. Baesens")),
+         journal   = "Knowledge and Data Engineering, IEEE Transactions on",
+         year = "2013",
+         volume = "25",
+         number = "5",
+         pages = "961-973",
+         url = "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289",
+         textVersion = paste("Verbraken, T., Wouter, V. and Baesens, B. (2013)",
+           "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models.",
+               "Knowledge and Data Engineering, IEEE Transactions on.", "25 (5): 961-973",
+                "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289")
+)
 
 citEntry(entry="article",
          title = "Development and application of consumer credit scoring 
@@ -20,15 +49,4 @@ citEntry(entry="article",
                 "http://www.sciencedirect.com/science/article/pii/S0377221714003105")
 )
 
-citEntry(entry="Manual",
-         title = "EMP: Expected Maximum Profit for Credit Scoring",
-         author = personList(as.person("Cristian Bravo"),
-                             as.person("Thomas Verbraken")),
-         year = year,
-         note = vers,
-         textVersion =
-         paste("Bravo, C. and Verbraken, T. (",
-               year,
-               "). EMP: Expected Maximum Profit for Credit Scoring. ",
-               vers, ". ", "Available Online: http://cran.r-project.org/web/packages/EMP/index.html",
-                sep=""))
+

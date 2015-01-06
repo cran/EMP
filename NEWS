@@ -1,0 +1,4 @@
+New in version 2.0.0 (Released 2015-01-06):
+  - Added new churn prediction code. Function by Seppen vanden Broucke.
+  - Changed manual ROC calculation to more efficient one in package ROCR.
+  - Package ROCR now required dependency, to account for the previous change.

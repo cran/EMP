@@ -3,45 +3,50 @@
 \alias{EMP}
 \docType{package}
 \title{
-Expected Maximum Profit for Credit Scoring.
+Expected Maximum Profit Classification Performance Measure
 }
 \description{
 The EMP measure is an alternative to AUC that includes the expected profit of
 a given model, when compared to a baseline (no model used). Presented in 
-Verbraken et al. (2014) as a preferred measure for credit scoring in any 
-profit-driven environment. This implementation assumes an LGD distribution
-with two point masses, and a constant ROI.
+Verbraken et al. (2014) as a preferred measure for credit risk scoring in any 
+profit-driven environment and in Verbraken et al. (2013) as a measure for customer 
+churn prediction. For credit scoring, this implementation assumes an LGD distribution 
+with two point masses, and a constant ROI. For churn prediction, this implementation
+assumes a beta distribution and a constant CLV.
 }
 \details{
 \tabular{ll}{
 Package: \tab EMP\cr
 Type: \tab Package\cr
-Version: \tab 1.0.2\cr
-Date: \tab 2014-08-24\cr
+Version: \tab 2.0.0\cr
+Date: \tab 2015-01-06\cr
 License: \tab GPL (>=3)\cr
 }
-The package consists of only two functions, EMP_CS and calcROC. The second one
-estimates the convex hull of any ROC function starting from the scores and the
-classes, while the second estimates the EMP in this particular case. See the
-help pages of each function for details.
+The package consists of only three functions, empCreditScoring, empChurn and empRocInfo. 
+The empRocInfo returns the convex hull of any ROC function starting from a prediction 
+object (provided by the ROCR package) and is normally not to be called directly, as it 
+is called by the other two functions in order to retrieve EMP measures. See the help 
+pages of each function for details.
 }
 \author{
-Authors: Cristian Bravo and Thomas Verbraken.
+Authors: Cristian Bravo, Seppe vanden Broucke and Thomas Verbraken.
 Mantainer: Cristian Bravo <crbravo@utalca.cl>.
 }
 \references{
+Verbraken, T., Wouter, V. and Baesens, B. (2013). A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models. Knowledge and Data Engineering, IEEE Transactions on. 25 (5): 961-973. Available Online: \url{http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289}
 Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014). Development and application of consumer credit scoring models using profit-based classification measures. European Journal of Operational Research. 238 (2): 505 - 513. Available Online: \url{http://www.sciencedirect.com/science/article/pii/S0377221714003105}
 }
 \examples{
-# Dummy dataset.
+# Construct artificial probability scores and true class labels
 score.ex <- runif(1000, 0, 1)
-class.ex <- lapply(score.ex, function(x){rbinom(1,1,x)})
-class.ex <- unlist(class.ex)
+class.ex <- unlist(lapply(score.ex, function(x){rbinom(1,1,x)}))
 
-# Calculate ROC curve.
-ROC.ex <- calcROC(score.ex, class.ex)
+# Make prediction object (ROCR package)
+pred.ex <- prediction(score.ex, class.ex)
 
-# Estimates EMP with point masses in 0.1 and 0.9, and 0.1 ROI
-EMP.ex <- EMP_CS(ROC.ex, 0.1, 0.1, 0.1)
-EMP.ex
+# Calculate EMP measures for credit risk scoring
+empCreditScoring(pred.ex)
+
+# Calculate EMP measures for customer churn prediction
+empChurn(pred.ex)
 }

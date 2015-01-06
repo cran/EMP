@@ -1,15 +1,14 @@
 Package: EMP
 Type: Package
-Title: Expected Maximum Profit for Credit Scoring.
-Version: 1.0.2
-Date: 2014-08-24
-Author: Cristian Bravo and Thomas Verbraken
+Title: Expected Maximum Profit Classification Performance Measure
+Version: 2.0.0
+Date: 2015-01-06
+Author: Cristian Bravo, Seppe vanden Broucke and Thomas Verbraken
 Maintainer: Cristian Bravo <crbravo@utalca.cl>
-Depends: R (>= 3.0.0)
-Description: Functions for estimating EMP (Expected Maximum Profit Measure) in
-  Credit Scoring, according to Verbraken et al (2014).
+Depends: R (>= 3.0.0), ROCR
+Description: Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014).
 License: GPL (>= 3)
-Packaged: 2014-08-24 16:23:29 UTC; cristian
+Packaged: 2015-01-07 21:06:08 UTC; cristian
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2014-08-24 19:07:57
+Date/Publication: 2015-01-08 12:20:03
