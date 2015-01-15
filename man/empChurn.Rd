@@ -5,11 +5,12 @@
 Estimates the EMP for customer churn prediction, considering constant CLV and a given cost of contact f and retention offer d.
 }
 \usage{
-empChurn(prediction, alpha = 6, beta = 14, 
-clv = 200, d = 10, f = 1)
+empChurn(scores, classes, alpha = 6, 
+beta = 14, clv = 200, d = 10, f = 1)
 }
 \arguments{
-\item{prediction}{A prediction object, output of the prediction function in the ROCR package.}
+\item{scores}{A vector of predicted probabilities.}
+\item{classes}{A vector of true binary class labels.}
 \item{alpha}{Alpha parameter of unimodel beta distribution.}
 \item{beta}{Beta parameter of unimodel beta distribution.}
 \item{clv}{Constant CLV per retained customer.}
@@ -38,15 +39,12 @@ See Also \code{\link{empChurn}}, \code{\link{prediction}}.
 score.ex <- runif(1000, 0, 1)
 class.ex <- unlist(lapply(score.ex, function(x){rbinom(1,1,x)}))
 
-# Make prediction object (ROCR package)
-pred.ex <- prediction(score.ex, class.ex)
-
 # Calculate EMP measures for customer churn prediction
-empChurn(pred.ex)
+empChurn(score.ex, class.ex)
 
 # Calculate EMP measures for customer churn prediction with
 # lower clv and higher costs
-empChurn(pred.ex, clv = 100, d = 30, f = 5)
+empChurn(score.ex, class.ex, clv = 100, d = 30, f = 5)
 }
 \keyword{classif}
 \keyword{evaluation}

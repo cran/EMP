@@ -1,2 +1,3 @@
-exportPattern("^[[:alpha:]]+")
-import(ROCR)
+exportPattern("^[^\\.]")
+importFrom(ROCR,prediction)
+importFrom(ROCR,performance)

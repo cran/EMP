@@ -1,3 +1,9 @@
+New in version 2.0.0 (Released 2015-01-15):
+  - Namespace sanitized.
+  - empRocInfo removed from userland and made private.
+  - Warning: The function calls have changed from version 2.0.0, and are now
+    akin to version 1. Please adjust your code as needed.
+
 New in version 2.0.0 (Released 2015-01-06):
   - Added new churn prediction code. Function by Seppen vanden Broucke.
   - Changed manual ROC calculation to more efficient one in package ROCR.

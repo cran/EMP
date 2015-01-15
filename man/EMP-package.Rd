@@ -18,15 +18,11 @@ assumes a beta distribution and a constant CLV.
 \tabular{ll}{
 Package: \tab EMP\cr
 Type: \tab Package\cr
-Version: \tab 2.0.0\cr
-Date: \tab 2015-01-06\cr
+Version: \tab 2.0.1\cr
+Date: \tab 2015-01-15\cr
 License: \tab GPL (>=3)\cr
 }
-The package consists of only three functions, empCreditScoring, empChurn and empRocInfo. 
-The empRocInfo returns the convex hull of any ROC function starting from a prediction 
-object (provided by the ROCR package) and is normally not to be called directly, as it 
-is called by the other two functions in order to retrieve EMP measures. See the help 
-pages of each function for details.
+The package exports only two functions, empCreditScoring and empChurn.
 }
 \author{
 Authors: Cristian Bravo, Seppe vanden Broucke and Thomas Verbraken.
@@ -41,12 +37,9 @@ Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014). Development and appl
 score.ex <- runif(1000, 0, 1)
 class.ex <- unlist(lapply(score.ex, function(x){rbinom(1,1,x)}))
 
-# Make prediction object (ROCR package)
-pred.ex <- prediction(score.ex, class.ex)
-
 # Calculate EMP measures for credit risk scoring
-empCreditScoring(pred.ex)
+empCreditScoring(score.ex, class.ex)
 
 # Calculate EMP measures for customer churn prediction
-empChurn(pred.ex)
+empChurn(score.ex, class.ex)
 }

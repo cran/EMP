@@ -5,10 +5,11 @@
 Estimates the EMP for credit risk scoring, considering constant ROI and a bimodal LGD function with point masses p0 and p1 for no loss and total loss, respectively.
 }
 \usage{
-empCreditScoring(prediction, p0=0.55, p1=0.1, ROI=0.2644)
+empCreditScoring(scores, classes, p0=0.55, p1=0.1, ROI=0.2644)
 }
 \arguments{
-\item{prediction}{A prediction object, output of the prediction function in the ROCR package.}
+\item{scores}{A vector of predicted probabilities.}
+\item{classes}{A vector of true binary class labels.}
 \item{p0}{Percentage of cases on the first point mass of the LGD distribution (complete recovery).}
 \item{p1}{Percentage of cases on the second point mass of the LGD distribution (complete loss).}
 \item{ROI}{Constant ROI per granted loan. A percentage.}
@@ -33,15 +34,12 @@ See Also \code{\link{empChurn}}, \code{\link{prediction}}.
 score.ex <- runif(1000, 0, 1)
 class.ex <- unlist(lapply(score.ex, function(x){rbinom(1,1,x)}))
 
-# Make prediction object (ROCR package)
-pred.ex <- prediction(score.ex, class.ex)
-
 # Calculate EMP measures for credit risk scoring
-empCreditScoring(pred.ex)
+empCreditScoring(score.ex, class.ex)
 
 # Calculate EMP measures for credit risk scoring with point masses
 # in 0.1 and 0.9, and 0.1 ROI
-empCreditScoring(pred.ex, 0.1, 0.1, 0.1)
+empCreditScoring(score.ex, class.ex, 0.1, 0.1, 0.1)
 }
 \keyword{classif}
 \keyword{evaluation}

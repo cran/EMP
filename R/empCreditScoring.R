@@ -1,18 +1,20 @@
-empCreditScoring <- function(prediction, p0=0.55, p1=0.1, ROI=0.2644){
+empCreditScoring <- function(scores, classes, p0=0.55, p1=0.1, ROI=0.2644){
+  # This software comes with absolutely no warranty. Use at your own risk.
+  #
   # Adapted from:
   # Verbraken T., Bravo C., Weber, R., and Baesens, B. 2014. Development and 
   # application of consumer credit scoring models using profit-based 
   # classification measures. European Journal of Operational Research.
   # 238 (2): 505-513.
   #
-  # This software comes with absolutely no warranty. Use at your own risk.
-  #
   # Estimates the EMP for credit risk scoring, considering constant ROI and
   # a bimodal LGD function with point masses p0 and p1 for no loss and total 
   # loss, respectively.
   #
+  #
   # Arguments:
-  #   prediction}{A prediction object, output of the prediction function in the ROCR package.
+  #   scores: A vector of probability scores.
+  #   classes: A vector of true class labels.
   #   p0:Percentage of cases on the first point mass of the LGD distribution (complete recovery).
   #   p1: Percentage of cases on the second point mass of the LGD distribution (complete loss).
   #   ROI: Constant ROI per granted loan. A percentage.
@@ -22,7 +24,7 @@ empCreditScoring <- function(prediction, p0=0.55, p1=0.1, ROI=0.2644){
   #     EMPfrac: The percentage of cases that should be excluded, that is, 
   #     the percentual cutoff at EMP profit.
   
-  roc = empRocInfo(prediction)
+  roc = .empRocInfo(scores, classes)
   
   alpha <- 1-p0-p1
   

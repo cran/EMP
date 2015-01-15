@@ -1,16 +1,20 @@
-empChurn <- function(prediction, alpha = 6, beta = 14, clv = 200, d = 10, f = 1) {
+empChurn <- function(scores, classes, alpha = 6, beta = 14, clv = 200, d = 10, f = 1) {
+  # This software comes with absolutely no warranty. Use at your own risk.
+  #
   # Adapted from:
   # Verbraken, T., Wouter, V. and Baesens, B. (2013). A Novel Profit Maximizing 
   # Metric for Measuring Classification Performance of Customer Churn Prediction
   # Models. Knowledge and Data Engineering, IEEE Transactions on. 25 (5): 
   # 961-973.
   # Available Online: http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf
-  # This software comes with absolutely no warranty. Use at your own risk.
+  #
+  # Estimates the EMP for customer churn prediction, considering constant CLV
+  # and a given cost of contact f and retention offer d.
   #
   #
   # Arguments:
-  #   prediction: A prediction object, output of the prediction function in the 
-  #   ROCR package.
+  #   scores: A vector of probability scores.
+  #   classes: A vector of true class labels.
   #   p0: Percentage of cases on the first point mass of the LGD distribution 
   #   (complete recovery).
   #   p1: Percentage of cases on the second point mass of the LGD distribution 
@@ -22,7 +26,7 @@ empChurn <- function(prediction, alpha = 6, beta = 14, clv = 200, d = 10, f = 1)
   #     EMPfrac: The percentage of cases that should be excluded, that is, 
   #     the percentual cutoff at EMP profit.  
   
-  roc = empRocInfo(prediction)
+  roc = .empRocInfo(scores, classes)
   
   egamma <- alpha / (alpha+beta);
   delta  <- d/clv
