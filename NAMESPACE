@@ -1,3 +1,5 @@
 exportPattern("^[^\\.]")
 importFrom(ROCR,prediction)
 importFrom(ROCR,performance)
+importFrom("stats", "pbeta")
+importFrom("utils", "head", "tail")
