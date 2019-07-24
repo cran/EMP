@@ -1,10 +1,10 @@
-fcda33243b734eeae53d5390d7e76617 *DESCRIPTION
+2009fe06cc47ade7fcc915a4c788909b *DESCRIPTION
 ee4d9b2e9db0d578a6fb21e76ee8b805 *NAMESPACE
-e36fed4417f307e1b2b83c716b59aed3 *NEWS
+bbcbe14589f3c51b625f631fe1c44a34 *NEWS
 58aada19133737788ae95cec8e570c85 *R/empChurn.R
 8d4eceb02540a508bc741fef0fcdc79c *R/empCreditScoring.R
 0b245810848cd08cfca1c89373d8b5ff *R/empRocInfo.R
 53fe8198a75df90d1479082634fc36fb *inst/CITATION
-63d8ef36d6072de4ea2f304acda3430f *man/EMP-package.Rd
+ddd7afb15b2be591e6cf8626242ab244 *man/EMP-package.Rd
 fe5b6adb57f7275aea019c6d401e07aa *man/empChurn.Rd
 dbcda0951f461b392aee8141362aa1da *man/empCreditScoring.Rd

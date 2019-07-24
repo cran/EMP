@@ -18,15 +18,15 @@ assumes a beta distribution and a constant CLV.
 \tabular{ll}{
 Package: \tab EMP\cr
 Type: \tab Package\cr
-Version: \tab 2.0.2\cr
-Date: \tab 2017-05-11\cr
+Version: \tab 2.0.5\cr
+Date: \tab 2019-07-24\cr
 License: \tab GPL (>=3)\cr
 }
 The package exports only two functions, empCreditScoring and empChurn.
 }
 \author{
 Authors: Cristian Bravo, Seppe vanden Broucke and Thomas Verbraken.
-Mantainer: Cristian Bravo <C.Bravo@soton.ac.uk>.
+Mantainer: Cristian Bravo <cbravoro@uwo.ca>.
 }
 \references{
 Verbraken, T., Wouter, V. and Baesens, B. (2013). A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models. Knowledge and Data Engineering, IEEE Transactions on. 25 (5): 961-973. Available Online: \url{http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289}
