@@ -1,3 +1,9 @@
+New in version 2.0.6 (Released 2025-05-07):
+  - citEntry() now uses the new citation() function from R 4.0.0.
+  - Package anchors on empChurn.rd and empCreditScoring.rd have been updated.
+  - Package documentation has been updated to reflect the new version of R.
+  - Citation links updated to DOI links.
+
 New in version 2.0.5 (Released 2019-07-24):
   - Mantainer information updated.
 

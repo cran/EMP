@@ -3,50 +3,55 @@ citHeader("To cite the R package 'EMP' in publications, please use one of these 
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
 vers <- paste("R package version", meta$Version)
 
-citEntry(entry="Manual",
+bibentry(bibtype="Manual",
          title = "EMP: Expected Maximum Profit Classification Performance Measure",
-         author = personList(as.person("Cristian Bravo"),
-                             as.person("Seppe vanden Broucke"),
-                             as.person("Thomas Verbraken")),
+         author = c(person("Cristian Bravo", role="aut"), 
+         person("Seppe vanden Broucke", role="aut"), person("Thomas Verbraken", role="aut")),
          year = year,
          note = vers,
          textVersion =
          paste("Bravo, C. and Vanden Broucke, S. and Verbraken, T. (",
                year,
                "). EMP: Expected Maximum Profit Classification Performance Measure. ",
-               vers, ". ", "Available Online: http://cran.r-project.org/web/packages/EMP/index.html",
+               vers, ". ", "https://cran.r-project.org/package=EMP",
                 sep=""))
 
-citEntry(entry="article",
+bibentry(bibtype="article",
          title = "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models",
-         author = personList(as.person("T. Verbraken"), as.person("W. Verbeke"), as.person("B. Baesens")),
+         author = c(person("Thomas Verbraken", role="aut"), 
+         person("Wouter Verbeke", role="aut"), 
+         person("Bart Baesens", role="aut")
+         ),
          journal   = "Knowledge and Data Engineering, IEEE Transactions on",
          year = "2013",
          volume = "25",
          number = "5",
          pages = "961-973",
-         url = "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289",
+         url = "https://doi.org/10.1109/TKDE.2012.50",
          textVersion = paste("Verbraken, T., Wouter, V. and Baesens, B. (2013)",
            "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models.",
                "Knowledge and Data Engineering, IEEE Transactions on.", "25 (5): 961-973",
-                "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289")
+                "https://doi.org/10.1109/TKDE.2012.50")
 )
 
-citEntry(entry="article",
+bibentry(bibtype="article",
          title = "Development and application of consumer credit scoring 
                   models using profit-based classification measures",
-         author = personList(as.person("T. Verbraken"), as.person("C. Bravo"),
-                  as.person("R. Weber"), as.person("B. Baesens")),
+         author = c(person("Thomas Verbraken", role="aut"), 
+         person("Cristian Bravo", role="aut"), 
+         person("Richard Weber", role="aut"), 
+         person("Bart Baesens", role="aut")
+         ),
          journal   = "European Journal of Operational Research",
          year = "2014",
          volume = "238",
          number = "2",
          pages = "505-513",
-         url = "http://www.sciencedirect.com/science/article/pii/S0377221714003105",
+         url = "https://doi.org/10.1016/j.ejor.2014.04.001",
          textVersion = paste("Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014)",
   	       "Development and application of consumer credit scoring models using profit-based classification measures.",
                "European Journal of Operational Research.", "238 (2): 505-513",
-                "http://www.sciencedirect.com/science/article/pii/S0377221714003105")
+                "https://doi.org/10.1016/j.ejor.2014.04.001")
 )
 
 
